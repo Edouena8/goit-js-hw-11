@@ -12,7 +12,6 @@ export default class ImagesApiService {
         const url = `${BASE_URL}?key=${API_KEY}&q=${this.searchImg}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}`;
 
         const response = await axios.get(url);
-        console.log(response);
         this.incrementPage();
         return response.data;
     }
@@ -33,4 +32,4 @@ export default class ImagesApiService {
         this.searchImg = newImg;
     }
 
-    }
+}

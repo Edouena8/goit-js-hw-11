@@ -39,7 +39,6 @@ async function fetchImages() {
 
   try{
     const data = await imagesApiService.fetchImages();
-    console.log(data);
 
     if(data.hits.length === 0) throw new Error('No data');
 
